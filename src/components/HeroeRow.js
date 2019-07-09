@@ -19,7 +19,10 @@ class HeroeRow extends Component {
               style={{ display: useRing ? 'none' : '' }}
               onClick={() => handelClickRing(index)}
             >
-              💍 Use Ring
+              <span role="img" aria-label="Ring">
+                💍
+              </span>{' '}
+              Use Ring
             </div>
           </div>
         </td>

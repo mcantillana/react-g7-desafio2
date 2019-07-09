@@ -2,7 +2,7 @@ import React from 'react';
 
 import HeroSearch from './components/HeroSearch';
 import HeroTable from './components/HeroTable';
-import ExampleComponent from './components/ExampleComponent';
+// import ExampleComponent from './components/ExampleComponent'; not used
 
 import './assets/css/style.css';
 
