@@ -12,22 +12,22 @@ class HeroTable extends React.Component {
         isActive: true,
         isHidden: null,
         arrayHeroes: props.heroes.map(item => {
-          return {...item, useRing: false}
+          return {...item, useRing: false, killed: false}
         })
       }
     }
 
     handelClickKill = index => {
       
-      let current_element = this.state.arrayHeroes[index]
+      const current_element = this.state.arrayHeroes[index]
 
       const newArray = this.state.arrayHeroes.filter((item, idx) => { 
-        return idx != index
+        return idx !== index
       })
-
+      
+      current_element.killed = true;
       newArray.push(current_element)
       
-
       this.setState({
         arrayHeroes: newArray
       })
@@ -40,7 +40,7 @@ class HeroTable extends React.Component {
       });
 
       const newArray = filterArray.filter((item, idx) => { 
-        return idx != index
+        return idx !== index
       })
       
       this.setState({

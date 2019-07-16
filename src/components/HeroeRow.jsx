@@ -3,13 +3,13 @@ import React from 'react';
 class HeroeRow extends React.Component {
     render() {
 
-        const {name, race, age, weapon, useRing} = this.props.hero;
+        const {name, race, age, weapon, useRing, killed} = this.props.hero;
 
         const {handelClickRing, handelClickKill, index} = this.props
 
         return (
             
-            <tr className="character-row">
+            <tr className="character-row" style={{color: (killed?'grey':'')}}>
               <td>{name}</td>
               <td>{race}</td>
               <td>{age}</td>
